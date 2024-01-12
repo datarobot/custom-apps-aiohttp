@@ -8,3 +8,8 @@ This is required because datarobot performs liveness checks to the root path.
 To get this running on custom apps, simply run `docker build . -t my-aiohttp-custom-app` to build the image, then run
 `docker save my-aiohttp-custom-app -o myAiohttpApp.tgz` to save the app to a tgz. That tgz can then be uploaded on the
 applications page.
+
+
+Troubleshooting:
+* Some computers (eg M1 Macbooks) require docker images to be built via `docker buildx build --platform linux/amd64 . -t custom-apps-aiohttp`. This requires Docker Desktop, which requires a seperate license.
+  
